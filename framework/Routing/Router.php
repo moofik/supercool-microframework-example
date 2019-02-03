@@ -2,8 +2,6 @@
 
 namespace Moofik\Framework\Routing;
 
-use Moofik\Framework\Http\Request;
-
 class Router
 {
     /**
@@ -16,7 +14,7 @@ class Router
      * @param string $controller
      * @param string $method
      */
-    public function get(string $url, string $controller, string $method)
+    public function get(string $url, string $controller, string $method): void
     {
         $prefix = 'GET:';
         $pattern = $this->getUrlRegexPattern($url);
@@ -34,7 +32,7 @@ class Router
      * @param string $controller
      * @param string $method
      */
-    public function post(string $url, string $controller, string $method)
+    public function post(string $url, string $controller, string $method): void
     {
         $prefix = 'POST:';
         $pattern = $this->getUrlRegexPattern($url);
@@ -48,13 +46,12 @@ class Router
     }
 
     /**
-     * @param Request $request
+     * @param string $requestMethod
+     * @param string $requestUri
      * @return FurtherExecutionPath
      */
-    public function getExecutionPath(Request $request): FurtherExecutionPath
+    public function getExecutionPath(string $requestMethod, string $requestUri): FurtherExecutionPath
     {
-        $requestMethod = $request->getRequestMethod();
-        $requestUri = $request->getRequestUri();
         $arguments = null;
 
         foreach ($this->routesTable as $rule => $result) {
@@ -95,6 +92,8 @@ class Router
     }
 
     /**
+     * @param string $urlPattern
+     * @param array|null $values
      * @return array|null
      */
     private function resolveNamedArguments(string $urlPattern, ?array $values): ?array

@@ -41,19 +41,18 @@ abstract class AbstractApplication
     /**
      * @param Request $request
      * @return Response
-     * @throws \ReflectionException
      */
     public function handle(Request $request): Response
     {
-        $executionPath = $this->router->getExecutionPath($request);
+        $executionPath = $this->router->getExecutionPath($request->getRequestMethod(), $request->getRequestUri());
 
         $controller = $executionPath->getController();
         $method = $executionPath->getMethod();
         $namedArguments = $executionPath->getUrlArguments();
 
-        $classArguments = $this->argumentResolver->resolveMethodArguments($controller, $method, $namedArguments);
+        $methodArguments = $this->argumentResolver->resolveMethodArguments($controller, $method, $namedArguments);
         $controllerInstance = $this->argumentResolver->buildClassInstance($controller);
-        $response = $controllerInstance->$method(...$classArguments);
+        $response = $controllerInstance->$method(...$methodArguments);
 
         if (!$response instanceof Response) {
             throw new \RuntimeException('Controller method must return Response instance.');
