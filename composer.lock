@@ -1,0 +1,625 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "65304fefba51d69c8538d23c595fa01d",
+    "packages": [
+        {
+            "name": "atlas/cli",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atlasphp/Atlas.Cli.git",
+                "reference": "e307cc1ab1b81bb32a30507f76906029f4ce5153"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atlasphp/Atlas.Cli/zipball/e307cc1ab1b81bb32a30507f76906029f4ce5153",
+                "reference": "e307cc1ab1b81bb32a30507f76906029f4ce5153",
+                "shasum": ""
+            },
+            "require": {
+                "atlas/info": "~1.0",
+                "atlas/mapper": "~1.0",
+                "php": ">=7.1.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "pds/skeleton": "~1.0",
+                "phpunit/phpunit": "~7.0"
+            },
+            "bin": [
+                "bin/atlas-skeleton.php"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Atlas\\Cli\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Atlas.Cli Contributors",
+                    "homepage": "https://github.com/atlasphp/Atlas.Cli/contributors"
+                }
+            ],
+            "description": "Command-line interface for Atlas.",
+            "homepage": "http://github.com/atlasphp/Atlas.Cli",
+            "keywords": [
+                "data",
+                "mapper",
+                "mapping",
+                "orm",
+                "sql"
+            ],
+            "time": "2019-01-22T15:57:16+00:00"
+        },
+        {
+            "name": "atlas/info",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atlasphp/Atlas.Info.git",
+                "reference": "6c198cc63b19950d25d009e2d7679449407b8183"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atlasphp/Atlas.Info/zipball/6c198cc63b19950d25d009e2d7679449407b8183",
+                "reference": "6c198cc63b19950d25d009e2d7679449407b8183",
+                "shasum": ""
+            },
+            "require": {
+                "atlas/pdo": "~1.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "pds/skeleton": "~1.0",
+                "phpunit/phpunit": "~7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Atlas\\Info\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Uses an Atlas.Pdo connection to discover schema information.",
+            "homepage": "https://github.com/atlasphp/Atlas.Info",
+            "keywords": [
+                "database",
+                "db",
+                "ddl",
+                "schema",
+                "sql"
+            ],
+            "time": "2019-01-22T22:17:54+00:00"
+        },
+        {
+            "name": "atlas/mapper",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atlasphp/Atlas.Mapper.git",
+                "reference": "a674403aa696b70904cf55af71c8cec21c4a9d09"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atlasphp/Atlas.Mapper/zipball/a674403aa696b70904cf55af71c8cec21c4a9d09",
+                "reference": "a674403aa696b70904cf55af71c8cec21c4a9d09",
+                "shasum": ""
+            },
+            "require": {
+                "atlas/table": "~1.0",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "atlas/testing": "~1.0",
+                "pds/skeleton": "~1.0",
+                "phpunit/phpunit": "~7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Atlas\\Mapper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Atlas Contributors",
+                    "homepage": "https://github.com/atlasphp/Atlas.Mapper/contributors"
+                }
+            ],
+            "description": "A data mapper for the persistence model.",
+            "homepage": "http://github.com/atlasphp/Atlas.Mapper",
+            "keywords": [
+                "data",
+                "mapper",
+                "mapping",
+                "orm",
+                "sql"
+            ],
+            "time": "2018-11-09T12:57:05+00:00"
+        },
+        {
+            "name": "atlas/orm",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atlasphp/Atlas.Orm.git",
+                "reference": "3957c1880cf60d722b51f3152e966e19346049de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atlasphp/Atlas.Orm/zipball/3957c1880cf60d722b51f3152e966e19346049de",
+                "reference": "3957c1880cf60d722b51f3152e966e19346049de",
+                "shasum": ""
+            },
+            "require": {
+                "atlas/mapper": "~1.0",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "atlas/testing": "~1.0",
+                "pds/skeleton": "~1.0",
+                "phpunit/phpunit": "~7.0"
+            },
+            "suggest": {
+                "atlas/cli": "A command-line tool to build skeleton classes."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Atlas\\Orm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Atlas Contributors",
+                    "homepage": "https://github.com/atlasphp/Atlas.Orm/contributors"
+                }
+            ],
+            "description": "An ORM for your persistence model (not your domain model).",
+            "homepage": "http://github.com/atlasphp/Atlas.Orm",
+            "keywords": [
+                "data",
+                "mapper",
+                "mapping",
+                "orm",
+                "sql"
+            ],
+            "time": "2018-08-08T16:02:30+00:00"
+        },
+        {
+            "name": "atlas/pdo",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atlasphp/Atlas.Pdo.git",
+                "reference": "3fad08d7732b0760b7706c65bc727426483610dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atlasphp/Atlas.Pdo/zipball/3fad08d7732b0760b7706c65bc727426483610dd",
+                "reference": "3fad08d7732b0760b7706c65bc727426483610dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "pds/skeleton": "~1.0",
+                "phpunit/phpunit": "~7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Atlas\\Pdo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Atlas.Pdo Contributors",
+                    "homepage": "https://github.com/atlasphp/Atlas.Pdo/contributors"
+                }
+            ],
+            "description": "Provides a PDO instance decorator with convenience methods, and a connection manager.",
+            "homepage": "https://github.com/atlasphp/Atlas.Pdo",
+            "keywords": [
+                "Connection",
+                "database",
+                "pdo",
+                "sql"
+            ],
+            "time": "2018-08-08T13:04:27+00:00"
+        },
+        {
+            "name": "atlas/query",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atlasphp/Atlas.Query.git",
+                "reference": "6b3e6fcc6ca9be8ac1685cfe8ccecf90e03e68dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atlasphp/Atlas.Query/zipball/6b3e6fcc6ca9be8ac1685cfe8ccecf90e03e68dc",
+                "reference": "6b3e6fcc6ca9be8ac1685cfe8ccecf90e03e68dc",
+                "shasum": ""
+            },
+            "require": {
+                "atlas/pdo": "~1.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "pds/skeleton": "~1.0",
+                "phpunit/phpunit": "~7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Atlas\\Query\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Atlas.Query Contributors",
+                    "homepage": "https://github.com/atlasphp/Atlas.Query/contributors"
+                }
+            ],
+            "description": "Object-oriented query builders for MySQL, Postgres, SQLite, and SQLServer.",
+            "homepage": "https://github.com/atlasphp/Atlas.Query",
+            "keywords": [
+                "database",
+                "db",
+                "delete",
+                "dml",
+                "insert",
+                "mysql",
+                "pdo",
+                "pgsql",
+                "postgres",
+                "postgresql",
+                "query",
+                "select",
+                "sql",
+                "sql server",
+                "sqlite",
+                "sqlserver",
+                "update"
+            ],
+            "time": "2018-08-12T14:19:01+00:00"
+        },
+        {
+            "name": "atlas/table",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atlasphp/Atlas.Table.git",
+                "reference": "e56ce3e807eb18d113757ddcde26f7afe420e546"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atlasphp/Atlas.Table/zipball/e56ce3e807eb18d113757ddcde26f7afe420e546",
+                "reference": "e56ce3e807eb18d113757ddcde26f7afe420e546",
+                "shasum": ""
+            },
+            "require": {
+                "atlas/pdo": "~1.0",
+                "atlas/query": "~1.0",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "atlas/testing": "~1.0",
+                "pds/skeleton": "~1.0",
+                "phpunit/phpunit": "~7.0"
+            },
+            "suggest": {
+                "atlas/cli": "A command-line tool to build skeleton classes."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Atlas\\Table\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Atlas Contributors",
+                    "homepage": "https://github.com/atlasphp/Atlas.Table/contributors"
+                }
+            ],
+            "description": "Table data gateway implementation for Atlas.",
+            "homepage": "http://github.com/atlasphp/Atlas.Table",
+            "keywords": [
+                "data",
+                "gateway",
+                "mapper",
+                "mapping",
+                "orm",
+                "sql",
+                "table"
+            ],
+            "time": "2018-08-12T20:46:15+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2018-11-20T15:27:04+00:00"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v4.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "b0a03c1bb0fcbe288629956cf2f1dd3f1dc97522"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/b0a03c1bb0fcbe288629956cf2f1dd3f1dc97522",
+                "reference": "b0a03c1bb0fcbe288629956cf2f1dd3f1dc97522",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/contracts": "^1.0",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<3.4",
+                "symfony/process": "<3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~3.4|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~3.4|~4.0",
+                "symfony/lock": "~3.4|~4.0",
+                "symfony/process": "~3.4|~4.0"
+            },
+            "suggest": {
+                "psr/log-implementation": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/lock": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Console\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-04T15:13:53+00:00"
+        },
+        {
+            "name": "symfony/contracts",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/contracts.git",
+                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/contracts/zipball/1aa7ab2429c3d594dd70689604b5cf7421254cdf",
+                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "psr/cache": "^1.0",
+                "psr/container": "^1.0"
+            },
+            "suggest": {
+                "psr/cache": "When using the Cache contracts",
+                "psr/container": "When using the Service contracts",
+                "symfony/cache-contracts-implementation": "",
+                "symfony/service-contracts-implementation": "",
+                "symfony/translation-contracts-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\": ""
+                },
+                "exclude-from-classmap": [
+                    "**/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A set of abstractions extracted out of the Symfony components",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2018-12-05T08:06:11+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T13:07:52+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Moofik/testtask",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "vladon",
+            "email": "vlis_grisaraev@mail.com"
+        }
+    ],
+    "require": {
+        "atlas/orm": "^3.1",
+        "symfony/console": "^4.2",
+        "atlas/cli": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Moofik\\Framework\\": "framework/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    }
+}
