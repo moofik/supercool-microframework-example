@@ -9,9 +9,9 @@
 <html lang="ru">
 <head>
     <title>Tasks</title>
-    <script src="/public/js/jquery-3.3.1.min.js"></script>
-    <script src="/public/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
 <form class="p-5" action="/login" method="post">

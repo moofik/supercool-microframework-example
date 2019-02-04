@@ -3,12 +3,12 @@
 use App\Application;
 use Moofik\Framework\Http\Request;
 
-require './vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 /* Разрулим запросы к статическим файлам для CLI сервера */
 if (PHP_SAPI == 'cli-server') {
     $url = parse_url($_SERVER['REQUEST_URI']);
-    $file = __DIR__ . '/..' . $url['path'];
+    $file = __DIR__ . $url['path'];
     if (is_file($file)) return false;
 }
 

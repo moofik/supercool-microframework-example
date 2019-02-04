@@ -41,16 +41,16 @@ class Application extends AbstractApplication
         /* Записываем инстанс ОРМки в контейнер как синглтон */
         $atlas = Atlas::new(
             $pdoString,
-            'username',
-            'password'
+            '',
+            ''
         );
         $container->setInstance(Atlas::class, $atlas);
 
         /* А так же коннекшн, тоже как синглтон, для нашего приложения это подходит */
         $connection = Connection::new(
             $pdoString,
-            'username',
-            'password'
+            '',
+            ''
         );
         $container->setInstance(Connection::class, $connection);
     }

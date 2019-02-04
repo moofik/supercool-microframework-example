@@ -17,7 +17,7 @@ class ViewRenderer
             $$name = $value;
         };
 
-        require $_SERVER['DOCUMENT_ROOT'] . '/views/' . $view;
+        require $_SERVER['DOCUMENT_ROOT'] . '/../views/' . $view;
 
         return ob_get_clean();
     }

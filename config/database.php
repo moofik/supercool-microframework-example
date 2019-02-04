@@ -2,7 +2,7 @@
 
 return [
     'pdo' => [
-        'sqlite:var/database.sqlite',
+        'sqlite:' . __DIR__ . '/../var/database.sqlite',
         '',
         ''
     ],
