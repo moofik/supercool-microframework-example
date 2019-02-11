@@ -42,7 +42,7 @@ class Authorization
             ->where('token = ', $this->session->get('token'))
             ->fetchRecord();
 
-        return $user->is_admin ? true : false;
+        return (null !== $user && $user->is_admin) ? true : false;
     }
 
     /**

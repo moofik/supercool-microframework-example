@@ -53,7 +53,6 @@ class Router
     public function getExecutionPath(string $requestMethod, string $requestUri): FurtherExecutionPath
     {
         $arguments = null;
-
         foreach ($this->routesTable as $rule => $result) {
             if ($requestMethod !== $result['_requestMethod']) {
                 continue;

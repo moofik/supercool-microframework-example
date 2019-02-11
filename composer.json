@@ -1,5 +1,5 @@
 {
-    "name": "Moofik/testtask",
+    "name": "Vlad94/testtask",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -16,7 +16,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
-            "Moofik\\Framework\\": "framework/"
+            "Vlad94\\Framework\\": "framework/"
         }
     },
     "autoload-dev": {

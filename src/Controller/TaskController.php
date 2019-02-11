@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\DataSource\Task\Task;
 use App\DataSource\Task\TaskRecord;
 use App\Service\Authorization\Authorization;
+use App\Service\Pagination\Paginator;
 use Atlas\Orm\Atlas;
 use Moofik\Framework\Http\RedirectResponse;
 use Moofik\Framework\Http\Request;
@@ -15,17 +16,34 @@ use Moofik\Framework\Template\ViewRenderer;
 class TaskController
 {
     /**
+     * @param Request $request
      * @param Atlas $atlas
      * @param Session $session
      * @param Authorization $authorization
+     * @param Paginator $paginator
      * @param ViewRenderer $renderer
      * @return Response
      */
-    public function index(Atlas $atlas, Session $session, Authorization $authorization, ViewRenderer $renderer)
-    {
+    public function index(
+        Request $request,
+        Atlas $atlas,
+        Session $session,
+        Authorization $authorization,
+        Paginator $paginator,
+        ViewRenderer $renderer
+    ) {
+        $orderBy = $request->get('sort', 'id DESC');
+        $page = $request->get('page', 1);
+        $perPage = $request->get('perPage', 3);
+
         $tasks = $atlas
             ->select(Task::class)
+            ->orderBy($orderBy)
+            ->page($page)
+            ->perPage($perPage)
             ->fetchRecordSet();
+
+        $pagesCount = $paginator->getTotalPageCount(Task::class, $perPage);
 
         $flashes = $session->getFlashData();
         $successMessage = $flashes['success'] ?? null;
@@ -36,6 +54,17 @@ class TaskController
             'successMessage' => $successMessage,
             'errorMessage' => $errorMessage,
             'isAdmin' => $authorization->isCurrentUserAdmin(),
+            'orderings' => [
+                'Сортировать по автору (по алфавиту)' => 'author ASC',
+                'Сортировать по автору (в обратном порядке)' => 'author DESC',
+                'Сортировать по статусу (сначала выполненные)' => 'is_completed DESC',
+                'Сортировать по статусу (сначала невыполненные)' => 'is_completed ASC',
+                'Сортировать по email (по алфавиту)' => 'email ASC',
+                'Сортировать по email (в обратном порядке)' => 'email DESC',
+            ],
+            'currentOrdering' => $orderBy,
+            'currentPage' => $page,
+            'pagesCount' => $pagesCount
         ]);
 
         return new Response($content, 200);
